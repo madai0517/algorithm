@@ -4,9 +4,7 @@
 
 #define N 20
 
-int sort[N];
-
-void BubbleSort(void) {
+void BubbleSort(int* sort) {
   int i, j, flag, k;
 
   k = 0;
@@ -25,6 +23,7 @@ void BubbleSort(void) {
 }
 
 int main(void) {
+  int sort[N];
   int i;
 
   srand((unsigned int)time(NULL));
@@ -35,7 +34,7 @@ int main(void) {
     printf("%d ", sort[i]);
   }
 
-  BubbleSort();
+  BubbleSort(sort);
 
   printf("\nafter:\n");
 
