@@ -8,7 +8,8 @@ class Bubble {
     boolean flag = false;
     do {
       flag = false;
-      for (int i = 0; i < N - 1; i++) {
+      int k = 0;
+      for (int i = 0; i < N - 1 - k; i++) {
         if (sort[i] > sort[i + 1]) {
           flag = true;
           int j = sort[i];
@@ -16,6 +17,7 @@ class Bubble {
           sort[i + 1] = j;
         }
       }
+      k++;
     } while (flag);
   }
 
