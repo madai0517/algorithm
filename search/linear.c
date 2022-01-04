@@ -6,13 +6,17 @@
 #define N (10)
 
 int linear_search(int x, int *a, int num) {
-  int n = 0;
+  int n = 0, t;
 
-  while (n < num && a[n] != x) {
+  t = a[num-1];
+  a[num-1] = x;
+
+  while (a[n] != x) {
     n++;
   }
 
-  if (n < num) {
+  a[num-1] = t;
+  if ((n < num-1) || x == t) {
     return n;
   }
 
